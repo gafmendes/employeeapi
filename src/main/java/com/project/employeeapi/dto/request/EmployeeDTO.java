@@ -1,6 +1,5 @@
 package com.project.employeeapi.dto.request;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -9,8 +8,6 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.br.CPF;
-
-import com.project.employeeapi.entity.Registration;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -38,10 +35,10 @@ public class EmployeeDTO {
 	@CPF
 	private String cpf;
 
-	private LocalDate birthDate;
+	private String birthDate;
 
 	@Valid
 	@NotEmpty
-	private List<Registration> registration;
+	private List<RegistrationDTO> registration;
 
 }
